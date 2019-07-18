@@ -103,6 +103,12 @@ function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0, 0, canvas.width, canvas.height);
 
+  c.beginPath();
+  c.rect(0, 0, canvas.width, canvas.height);
+  c.fillStyle = '#2c3e50';
+  c.fill();
+  c.closePath();
+  
   if (state == USER) {
     for (let v of drawing) {
       point(v.x + canvas.width / 2, v.y + canvas.height / 2);
