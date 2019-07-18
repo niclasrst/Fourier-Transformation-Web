@@ -98,7 +98,9 @@ function epiCycles(x, y, rotation, fourier) {
 }
 
 // Implementation
-function init() { state = -1; }
+function init() {
+  state = -1;
+}
 
 // Animation Loop
 function animate() {
@@ -110,7 +112,7 @@ function animate() {
   c.fillStyle = '#2c3e50';
   c.fill();
   c.closePath();
-  
+
   if (state == USER) {
     for (let v of drawing) {
       point(v.x + canvas.width / 2, v.y + canvas.height / 2);
