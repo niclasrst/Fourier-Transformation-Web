@@ -55,6 +55,7 @@ function map(val, a, b, c, d) { return c + ((val - a) / (b - a)) * (d - c); }
 function point(x, y) {
   c.beginPath();
   c.arc(x, y, 5, 0, 2 * Math.PI, true);
+  c.fillStyle = '#fff';
   c.fill();
   c.closePath();
 }
@@ -63,6 +64,7 @@ function line(x1, y1, x2, y2) {
   c.beginPath();
   c.moveTo(x1, y1);
   c.lineTo(x2, y2);
+  c.strokeStyle = '#fff';
   c.stroke();
   c.closePath();
 }
@@ -70,7 +72,7 @@ function line(x1, y1, x2, y2) {
 function circle(x, y, radius) {
   c.beginPath();
   c.arc(x, y, radius, 0, Math.PI * 2, false);
-  c.strokeStyle = '#000';
+  c.strokeStyle = '#fff';
   c.stroke();
   c.closePath();
 }
